@@ -4,7 +4,6 @@ import classes from "./page.module.css";
 import { shareMeal } from "@/lb/action";
 import { useFormState } from "react-dom";
 import { useFormStatus } from "react-dom";
-import TemporaryNoticeWrapper from "@/components/ui/temporary-notice-wrapper";
 
 function SubmitButton() {
   const { pending } = useFormStatus();
@@ -27,7 +26,7 @@ export default function ShareMealPage() {
         </h1>
         <p>Or any other meal you feel needs sharing!</p>
       </header>
-      <TemporaryNoticeWrapper demoMessage="This is a demonstration website. Form submissions will be simulated but not actually stored." />
+
       <main className={classes.main}>
         <form className={classes.form} action={formAction}>
           <div className={classes.row}>

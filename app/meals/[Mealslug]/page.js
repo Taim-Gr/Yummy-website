@@ -3,7 +3,6 @@ import classes from "./page.module.css";
 import Image from "next/image";
 import NotFoundPage from "./not-found";
 import { notFound } from "next/navigation";
-import TemporaryNoticeWrapper from "@/components/ui/temporary-notice-wrapper";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -40,7 +39,7 @@ export default async function MealDetailsPage({ params }) {
           <p className={classes.summary}>{meal.summary}</p>
         </div>
       </header>
-      <TemporaryNoticeWrapper demoMessage="This is a demonstration website showing static recipe data." />
+
       <main>
         <p
           className={classes.instructions}

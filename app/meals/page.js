@@ -3,7 +3,6 @@ import classes from "./page.module.css";
 import MealsGrid from "@/components/meals/meals-grid";
 import { Suspense } from "react";
 import { getMeals } from "@/lb/meals";
-import TemporaryNoticeWrapper from "@/components/ui/temporary-notice-wrapper";
 
 async function Meals() {
   const meals = await getMeals();
@@ -35,14 +34,7 @@ export default async function MealsPage({ searchParams }) {
           <Link href="/meals/share">Share Your Favourite Recipe</Link>
         </p>
       </header>
-      <TemporaryNoticeWrapper
-        demoMessage="This is a demonstration website with static demo data."
-        successMessage={
-          showSuccessMessage
-            ? "Your meal was successfully submitted (demonstration only)!"
-            : null
-        }
-      />
+
       <main className={classes.main}>
         <Suspense
           fallback={<div className={classes.loading}>Fetching meals...</div>}
